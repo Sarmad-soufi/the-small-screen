@@ -6,7 +6,6 @@ from multiprocessing import Pool
 
 GOLD_BIN = "/opt/programs/csd/ccdc-software/gold/GOLD/bin/gold_auto"
 
-# Added the FITNESS FUNCTION block to explicitly call chemplp
 GOLD_TEMPLATE = """GOLD CONFIGURATION FILE
 
 DATA FILES
