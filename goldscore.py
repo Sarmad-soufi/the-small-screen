@@ -6,8 +6,6 @@ from multiprocessing import Pool
 
 GOLD_BIN = "/opt/programs/csd/ccdc-software/gold/GOLD/bin/gold_auto"
 
-# The strictly compliant standard format required by the gold_auto parser. 
-# It requires block headers, and the crucial param_file and tordist_file defaults.
 GOLD_TEMPLATE = """GOLD CONFIGURATION FILE
 
 DATA FILES
