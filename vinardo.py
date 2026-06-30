@@ -5,7 +5,7 @@ import subprocess
 import os
 import sys
 
-VINA_BIN = "/home/sarmad/.micromamba/envs/zinc/bin/vina"
+#VINA_BIN = "path to the vina bin"
 
 
 def dock_ligand(args):
