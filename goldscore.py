@@ -20,9 +20,9 @@ FITNESS FUNCTION:
 fitness_function = goldscore
 
 FLOOD FILL
-origin = 10.163 11.447 -8.171
-radius = 15.0
-do_cavity = 0
+#origin = select your settings
+#radius = select your settings
+#do_cavity = select your settings
 
 POPULATION
 popsiz = 100
