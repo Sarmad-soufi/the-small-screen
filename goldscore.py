@@ -4,7 +4,7 @@ import multiprocessing
 from pathlib import Path
 from multiprocessing import Pool
 
-GOLD_BIN = "/opt/programs/csd/ccdc-software/gold/GOLD/bin/gold_auto"
+#GOLD_BIN = "add dir to the HERMES bin"
 
 GOLD_TEMPLATE = """GOLD CONFIGURATION FILE
 
@@ -54,10 +54,8 @@ def run_gold(job):
         
         print(f"[{worker_name}] STARTING: Docking {lig_name}...", flush=True)
         
-        # Run inside out_dir to prevent temp file collision
         result = subprocess.run(cmd, capture_output=True, text=True, cwd=out_dir)
         
-        # Save the Python subprocess stream to a separate debug file
         debug_file = out_dir / "subprocess_debug.log"
         with open(debug_file, "w") as f:
             f.write("--- STDOUT ---\n")
