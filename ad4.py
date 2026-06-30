@@ -17,7 +17,7 @@ def dock_ligand(args):
     print(f"Docking {base}...")
 
     cmd = [
-        "/home/sarmad/.micromamba/envs/zinc/bin/vina",
+        #"directory to vina bin",
         "--ligand", str(ligand_path),
         "--maps", str(map_prefix),
         "--scoring", "ad4",
@@ -29,8 +29,7 @@ def dock_ligand(args):
         result = subprocess.run(cmd, capture_output=True, text=True)
         if result.returncode != 0:
             print(f"ERROR docking {base}:\n{result.stderr}")
-            return
-        # save stdout to log
+            return 
         with open(log_file, "w") as f:
             f.write(result.stdout)
         print(f"Finished docking {base}")
