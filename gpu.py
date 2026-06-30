@@ -1,10 +1,10 @@
 import subprocess
 from pathlib import Path
 
-container = Path("~/singularity/autodock.simg").expanduser()
-maps_dir = Path("~/data/docking/maps").expanduser()
-ligand_dir = Path("~/data/docking/prep/ligand_prep").expanduser()
-out_dir = Path("~/data/docking/adgpu/out").expanduser()
+#container = Path("path to singularity container dir").expanduser()
+#maps_dir = Path("path to grid maps dir").expanduser()
+#ligand_dir = Path("path to ligand dir").expanduser()
+#out_dir = Path("path to out dir").expanduser()
 
 fld_file = "Sec16_sec13.maps.fld"  # inside /maps
 out_dir.mkdir(parents=True, exist_ok=True)
@@ -24,7 +24,7 @@ for ligand_path in ligands:
         "-B", f"{ligand_dir}:/ligands",
         "-B", f"{out_dir}:/out",
         str(container),
-        "/opt/AutoDock-GPU/bin/autodock_gpu_128wi",
+        #"path to container directory",
         "--ffile", f"/maps/{fld_file}",
         "--lfile", f"/ligands/{ligand_path.name}",
         "--resnam", ligand_name,
